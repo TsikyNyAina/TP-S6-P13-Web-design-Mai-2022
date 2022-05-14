@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^rechauffement_climatique.php$  index1.php [L]
+RewriteRule ^fiche/([-_a-zA-Z0-9]*)-([_a-z0-9]*).php$  fiche.php?slug=$1&id=$2 [L]
+

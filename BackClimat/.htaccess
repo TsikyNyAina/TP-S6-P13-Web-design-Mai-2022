@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^rechauffement_climatique.php$  index.php [L]
+RewriteRule ^article-rechauffement_climatique.php$  elements.php [L]
