@@ -2,7 +2,7 @@
 	session_start();
 	if($_SESSION['admin']){
 
-		include('../function.php');
+		include('function.php');
 		
 		$idarticle = getId()+1;
 
@@ -23,7 +23,7 @@
     	unset($_SESSION['article']);
     	unset($_SESSION['para']);
 
-    	header('Location: article-rechauffement_climatique.php');
+    	header('Location: article_rechauffement_climatique.php');
 	}else{
 		header('Location: rechauffement_climatique.php');
 	}

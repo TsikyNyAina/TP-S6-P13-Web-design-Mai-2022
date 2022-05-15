@@ -8,7 +8,8 @@
 				$password ='root';
 				$database = 'climat';
 				
-				$connect = mysqli_connect($host, $username, $password, $database);
+				//$connect = pg_connect($host, $username, $password, $database);
+				$connect = pg_connect("host=localhost dbname=climat user=postgres password=mdpprom13");
 		   }catch (PDOException $e) {
 				print "Erreur ! : " . $e->getMessage();
 				die();

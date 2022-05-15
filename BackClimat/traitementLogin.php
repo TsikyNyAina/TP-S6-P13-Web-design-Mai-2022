@@ -5,7 +5,7 @@ include('function.php');
 
 if (isset($_POST['mail']) && isset($_POST['mdp']) ) {
     $mail= $_POST['mail'];
-    $mdp = sha1($_POST['mdp']);
+    $mdp = $_POST['mdp'];
     $log = login($mail,$mdp);
 
     if($log!=null){

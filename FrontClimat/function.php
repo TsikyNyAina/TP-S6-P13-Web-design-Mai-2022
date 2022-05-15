@@ -10,8 +10,8 @@
         $sql = sprintf($sql, $idActus,$slug);
         //echo $sql;
         // $val = array();
-        $basealaina = mysqli_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
-        while ($temp = mysqli_fetch_array($basealaina)) { //avadika tableau
+        $basealaina = pg_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
+        while ($temp = pg_fetch_array($basealaina)) { //avadika tableau
             $val    = $temp;
         }
         if(isset($val)){
@@ -27,8 +27,8 @@
         $sql = sprintf($sql, $idActus);
         //echo $sql;
         $val = array();
-        $basealaina = mysqli_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
-        while ($temp = mysqli_fetch_array($basealaina)) { //avadika tableau
+        $basealaina = pg_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
+        while ($temp = pg_fetch_array($basealaina)) { //avadika tableau
             $val[]    = $temp;
         }
         if(isset($val)){
@@ -42,8 +42,8 @@
 function getAllActus() {
     $sql = "select * from article order by dateArticle asc";
     $val = array();
-    $basealaina = mysqli_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
-    while ($temp = mysqli_fetch_array($basealaina)) { //avadika tableau
+    $basealaina = pg_query(connect(), $sql); //maka tableau tant que tsy lany ato de alefaso ao am val
+    while ($temp = pg_fetch_array($basealaina)) { //avadika tableau
         $val[] = $temp;
     }
     // mysqli_free_result($val );

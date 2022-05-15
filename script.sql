@@ -78,3 +78,13 @@ create table article(
 	image varchar(100),
 	url varchar(100) not null
 );
+
+
+create table sousArticle(
+	id serial primary key ,
+	titre varchar(100),
+	contenu text,
+	idarticle int,
+	foreign key (idarticle) references article(id)
+);
+
